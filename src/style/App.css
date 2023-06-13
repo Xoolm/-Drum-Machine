@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@700&family=Playfair+Display:ital@1&display=swap");
+/* font-family: 'Alegreya Sans SC', sans-serif;
+font-family: 'Playfair Display', serif; */
+* {
+  font-family: "Alegreya Sans SC", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(141.39deg, #74e6cf 13.88%, #c0e594 106.32%);
+}
+
+#drum-machine {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 800px;
+  height: 350px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 3px solid rgb(102, 255, 204);
+}
+
+.wrapperDisplay {
+  display: flex;
+}
+
+.power {
+  display: block;
+  position: fixed;
+  margin: 15px;
+}
+
+.recordWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.wrapperDisplay {
+  display: flex;
+  margin-top: 100px;
+}
+
+.displayWrap {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-right: 30px;
+}
+
+#display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  padding: 20px 40px;
+  font-size: 20px;
+  width: 180px;
+  height: 80px;
+  border-radius: 10px;
+  color: white;
+  transition: 2s;
+}
+
+#recording {
+  display: flex;
+  background-color: black;
+  padding: 5px 10px;
+  font-size: 13px;
+  width: 180px;
+  height: 80px;
+  border-radius: 10px;
+  color: white;
+  transition: 2s;
+  overflow: auto;
+}
+
+.recordTitle {
+  padding: 10px 0px 10px;
+}
+
+.volumeTitle {
+  padding: 10px 0px 10px;
+}
+
+.btnRecBank {
+  display: flex;
+  padding-top: 15px;
+  gap: 20px;
+}
+
+#play {
+  background-color: rgb(51, 255, 153);
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  box-shadow: 4px 4px 5px 1px black;
+  transition: 0.07s;
+}
+
+#play:active {
+  box-shadow: 1px 1px 1px 1px black;
+}
+
+#clear {
+  background-color: rgb(51, 255, 153);
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  box-shadow: 4px 4px 5px 1px black;
+  transition: 0.07s;
+}
+
+#clear:active {
+  box-shadow: 1px 1px 1px 1px black;
+}
+
+#powerTxt {
+  font-size: 20px;
+  font-weight: bolder;
+  padding-bottom: 5px;
+}
+
+#selectPwr {
+  border: 1px solid black;
+  width: 50px;
+  height: 20px;
+  padding: 1px;
+  margin-bottom: 20px;
+  background-color: black;
+}
+
+.inner {
+  width: 23px;
+  height: 16px;
+  background: red;
+  border: 1px solid black;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.On {
+  background-color: rgb(0, 179, 60);
+  float: right;
+}
+
+#pad_bank {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 50%;
+  height: 100%;
+  padding-left: 30px;
+}
+
+.drum-pad {
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 10px;
+  width: 100px;
+  height: 80px;
+  padding: 20px;
+  background-color: rgb(0, 255, 170);
+  box-shadow: 4px 4px 5px 1px black;
+}
+
+.drumActive {
+  box-shadow: 1px 1px 1px 1px black;
+  background-color: rgb(0, 153, 102);
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  margin-right: 15px;
+  height: 7px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+  background-image: linear-gradient(rgb(0, 255, 170), rgb(0, 153, 102));
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: rgb(77, 255, 195);
+  box-shadow: 0 0 2px 0 #555;
+}
+
+#recording::-webkit-scrollbar {
+  width: 5px;
+  background: rgba(183, 183, 183, 1);
+  border-radius: 50px;
+  box-shadow: inset 0 0 0 4px rgba(183, 183, 183, 1);
+}
+
+#recording::-webkit-scrollbar-thumb {
+  background: rgb(102, 255, 204);
+  border-radius: 50px;
+  position: relative;
+}
